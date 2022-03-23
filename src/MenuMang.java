@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class XoaPhanTuKhoiMang {
+public class MenuMang {
     public static void main(String[] args) {
         int choice = -1;
         int[] array = {};
