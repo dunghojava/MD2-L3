@@ -15,6 +15,7 @@ public class MenuMang {
             System.out.println("5. Chèn phần tử vào mảng");
             System.out.println("6. Gộp mảng");
             System.out.println("7. Khởi tạo mảng hai chiều");
+            System.out.println("8. Ma trận vuông");
             System.out.println("0. Exit");
             System.out.println("Enter your choice: ");
             choice = input.nextInt();
@@ -166,7 +167,7 @@ public class MenuMang {
                                 System.out.println("Nhập cột cần tính");
                                 int i = input.nextInt();
                                 int sum = 0;
-                                for (int j =0; j < triangleArray[i].length; j++) {
+                                for (int j = 0; j < triangleArray[i].length; j++) {
                                     sum += triangleArray[i][j];
                                 }
                                 System.out.println("Tổng của cột " + i + " bằng " + sum);
@@ -177,6 +178,27 @@ public class MenuMang {
                                 System.out.println("No choice!");
                         }
                     }
+                case 8:
+                    System.out.println("Nhập độ dài của ma trận vuông");
+                    int length_8 = input.nextInt();
+                    int sum_8 = 0;
+                    int[][] squareArray = new int[length_8][length_8];
+                    for (int i = 0; i < length_8; i++) {
+                        System.out.println("Nhập giá trị phần tử của mảng thứ " + (i + 1));
+                        for (int j = 0; j < length_8; j++) {
+                            squareArray[i][j] = input.nextInt();
+                            System.out.println("squareArray[" + i + "]" + "[" + j + "]" + " = " + squareArray[i][j]);
+                        }
+                    }
+                    for (int i = 0; i < length_8; i++) {
+                        for (int j = 0; j < length_8; j++) {
+                            if (i == j) {
+                                sum_8 += squareArray[i][j];
+                            }
+                        }
+                    }
+                    System.out.println("Tổng đường chéo chính bằng: " + sum_8);
+
                 case 0:
                     System.exit(0);
                 default:
