@@ -155,7 +155,28 @@ public class MenuMang {
                         }
                     }
                     System.out.println("Giá trị nhỏ nhất của mảng là: " + min);
-
+                    System.out.println("Bạn có muốn tính tổng của một cột không?!");
+                    int choice_7 = -1;
+                    while (choice_7 != 0) {
+                        System.out.println("1. Có");
+                        System.out.println("2. Không");
+                        choice_7 = input.nextInt();
+                        switch (choice_7) {
+                            case 1:
+                                System.out.println("Nhập cột cần tính");
+                                int i = input.nextInt();
+                                int sum = 0;
+                                for (int j =0; j < triangleArray[i].length; j++) {
+                                    sum += triangleArray[i][j];
+                                }
+                                System.out.println("Tổng của cột " + i + " bằng " + sum);
+                                break;
+                            case 2:
+                                break;
+                            default:
+                                System.out.println("No choice!");
+                        }
+                    }
                 case 0:
                     System.exit(0);
                 default:
