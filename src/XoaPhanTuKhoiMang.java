@@ -146,6 +146,16 @@ public class XoaPhanTuKhoiMang {
                     }
                     System.out.println("Giá trị lớn nhất của mảng là: " + max);
 
+                    int min = triangleArray[0][0];
+                    for (int i = 0; i < triangleArray.length; i++) {
+                        for (int j = 0; j < triangleArray[i].length; j++) {
+                            if (min > triangleArray[i][j]) {
+                                min = triangleArray[i][j];
+                            }
+                        }
+                    }
+                    System.out.println("Giá trị nhỏ nhất của mảng là: " + min);
+
                 case 0:
                     System.exit(0);
                 default:
