@@ -109,7 +109,7 @@ public class XoaPhanTuKhoiMang {
                         array2[i] = input.nextInt();
                         System.out.println("array[" + i + "]" + array2[i]);
                     }
-                    int[] array3 = new int[length1+length2];
+                    int[] array3 = new int[length1 + length2];
                     for (int i = 0; i < array1.length; i++) {
                         array3[i] = array1[i];
                     }
@@ -122,6 +122,29 @@ public class XoaPhanTuKhoiMang {
                     }
                     System.out.println(" ");
                     break;
+                case 7:
+                    System.out.println("Nhập độ dài mảng hai chiều");
+                    int i_length = input.nextInt();
+                    int[][] triangleArray = new int[i_length][];
+                    for (int i = 0; i < i_length; i++) {
+                        System.out.println("Nhập độ dài mảng con thứ " + (i + 1) + ": ");
+                        int j_length = input.nextInt();
+                        triangleArray[i] = new int[j_length];
+                        System.out.println("Nhập giá trị phần tử của mảng con thứ " + (i + 1) + ":");
+                        for (int j = 0; j < j_length; j++) {
+                            triangleArray[i][j] = input.nextInt();
+                            System.out.println("triangleArray[" + i + "]" + "[" + j + "]" + " = " + triangleArray[i][j]);
+                        }
+                    }
+                    int max = triangleArray[0][0];
+                    for (int i = 0; i < triangleArray.length; i++) {
+                        for (int j = 0; j < triangleArray[i].length; j++) {
+                            if (max < triangleArray[i][j]) {
+                                max = triangleArray[i][j];
+                            }
+                        }
+                    }
+                    System.out.println("Giá trị lớn nhất của mảng là: " + max);
 
                 case 0:
                     System.exit(0);
