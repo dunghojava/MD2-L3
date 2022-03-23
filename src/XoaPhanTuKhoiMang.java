@@ -14,6 +14,7 @@ public class XoaPhanTuKhoiMang {
             System.out.println("4. Nhập vị trí phần tử muốn xóa");
             System.out.println("5. Chèn phần tử vào mảng");
             System.out.println("6. Gộp mảng");
+            System.out.println("7. Khởi tạo mảng hai chiều");
             System.out.println("0. Exit");
             System.out.println("Enter your choice: ");
             choice = input.nextInt();
@@ -94,7 +95,7 @@ public class XoaPhanTuKhoiMang {
 
                     System.out.println("Nhập độ dài mảng thứ nhất");
                     int length1 = input.nextInt();
-                    int[] array1 = {};
+                    int[] array1 = new int[length1];
                     System.out.println("Nhập giá trị các phần tử của mảng thứ nhất");
                     for (int i = 0; i < length1; i++) {
                         array1[i] = input.nextInt();
@@ -102,23 +103,24 @@ public class XoaPhanTuKhoiMang {
                     }
                     System.out.println("Nhập độ dài mảng thứ hai");
                     int length2 = input.nextInt();
-                    int[] array2 = {};
+                    int[] array2 = new int[length2];
                     System.out.println("Nhập giá trị các phần tử của mảng thứ hai");
                     for (int i = 0; i < length2; i++) {
                         array2[i] = input.nextInt();
                         System.out.println("array[" + i + "]" + array2[i]);
                     }
-                    int[] array3 = {};
+                    int[] array3 = new int[length1+length2];
                     for (int i = 0; i < array1.length; i++) {
                         array3[i] = array1[i];
                     }
-                    for (int i = 0; i < array2.length; i++) {
-                        array3[i + array1.length - 1] = array2[i];
+                    for (int j = 0; j < array2.length; j++) {
+                        array3[j + array1.length] = array2[j];
                     }
                     System.out.println("Mảng mới sau khi nhập là: ");
                     for (int i : array3) {
-                        System.out.println(i + " ");
+                        System.out.print(i + " ");
                     }
+                    System.out.println(" ");
                     break;
 
                 case 0:
