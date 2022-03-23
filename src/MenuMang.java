@@ -16,6 +16,7 @@ public class MenuMang {
             System.out.println("6. Gộp mảng");
             System.out.println("7. Khởi tạo mảng hai chiều");
             System.out.println("8. Ma trận vuông");
+            System.out.println("9. Khởi tạo chuỗi");
             System.out.println("0. Exit");
             System.out.println("Enter your choice: ");
             choice = input.nextInt();
@@ -198,6 +199,23 @@ public class MenuMang {
                         }
                     }
                     System.out.println("Tổng đường chéo chính bằng: " + sum_8);
+                    break;
+                case 9:
+                    String chuoi;
+                    char kyTu;
+                    int count = 0;
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.println("Nhập vào một chuỗi bất kỳ:");
+                    chuoi = scanner.nextLine();
+                    System.out.println("Nhập một ký tự bất kỳ:");
+                    kyTu = scanner.next().charAt(0);
+                    for (int i = 0; i < chuoi.length(); i++) {
+                        if (kyTu == chuoi.charAt(i)) {
+                            count++;
+                        }
+                    }
+                    System.out.println("Số lần xuất hiện của ký tự " + kyTu + " trong chuỗi " + chuoi + " là " + count + " lần ");
+                    break;
 
                 case 0:
                     System.exit(0);
